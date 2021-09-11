@@ -1,13 +1,19 @@
 import React from "react";
-import Main from "./components/Main"
-
+import beastarray from "../src/assets/data.json";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 class App extends React.Component {
+
 
 
   render() {
     return (
       <div>
-        <Main />
+        <Header/>
+        <Main beastsList={beastarray} />
+       <Footer/>
+
       </div>
 
     );
