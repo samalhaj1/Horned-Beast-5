@@ -24,7 +24,7 @@ class Main extends React.Component {
                 {BeastsData.map((item) => {
                   return  <HornedBeasts
                     title={item.title} desc={item.description} imageUrl={item.image_url}  horns={item.horns} />
-              
+
                 })}
 
             </main>

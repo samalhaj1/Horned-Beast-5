@@ -19,6 +19,7 @@ class HornedBeasts extends React.Component {
         this.setState({
             votesnumber: this.state.votesnumber + 1
         });
+        // this.props.ShowMain(this.props.title,this.props.image_url,this.props.description);
     }
 
 
@@ -33,11 +34,11 @@ class HornedBeasts extends React.Component {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={this.props.imageUrl} onClick={this.voteNumberIncreace}/>
                     <Card.Body>
-                        <Card.Title> The Title is{this.props.title}</Card.Title>
+                        <Card.Title style={{height: '40px'}}> The Title is{this.props.title}</Card.Title>
                         <Card.Title>Number of hOrns  {this.props.horns}</Card.Title>
-                        <Card.Text> The description{this.props.description}<br />
+                        <Card.Text style = {{height: '4.9'}}> The description{this.props.description}<br />
                             Number of corrent votes:{this.state.votesnumber}</Card.Text>
-                        <Button onClick={this.voteNumberIncreace} variant="primary">vote for this lovely UniCorn
+                        <Button style={{ marginLeft: "10.1rem",  fontSize: "1.2rem"}} onClick={this.voteNumberIncreace} variant="primary">vote for this lovely UniCorn
                         </Button>
                     </Card.Body>
                 </Card>
