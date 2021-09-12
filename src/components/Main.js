@@ -1,36 +1,34 @@
 import React from "react";
-import HornedBeasts from './HornedBeasts';
-// import Footer from "./Footer";
-// import Header from "./Header";
-import BeastsData from "../assets/data.json"
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import HornedBeasts from "./HornedBeasts";
+import beastarray from "../assets/data.json";
+// import App from '../App';
 class Main extends React.Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state=(
-    //         beastTitle : 
+  render() {
+    return (
+      <main>
+        {beastarray.map((item) => {
+          return (
+            <HornedBeasts
+              title={item.title}
+              desc={item.description}
+              image_url={item.image_url}
+              horns={item.horns}
+              alt={item.keyword}
+              showModal={this.props.showModal}
+              handleClose={this.props.handleClose}
+            />
+          );
+        })}
+      </main>
+    );}}
+  
 
-
-
-    //     )
-
-
-
-    render() {
-        return (
-            <main>
-                {BeastsData.map((item) => {
-                  return  <HornedBeasts
-                    title={item.title} desc={item.description} imageUrl={item.image_url}  horns={item.horns} />
-              
-                })}
-
-            </main>
-
-        );
-    }
-}
 
 export default Main;
+
+
+
+
+
+
+
