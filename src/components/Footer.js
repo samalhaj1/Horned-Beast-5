@@ -5,7 +5,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
-                Samalhaj
+                Samalhaj 2021 ASAC
             </div>
 
         );
