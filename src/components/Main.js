@@ -1,34 +1,44 @@
-import React from "react";
-import HornedBeasts from "./HornedBeasts";
-import beastarray from "../assets/data.json";
+import React from 'react';
+import HornedBeasts from './HornedBeasts';
+import beastarray from '../assets/data.json';
+import Formhorn from './formforbeast';
 // import App from '../App';
 class Main extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      beastarray1: beastarray,
+    };
+  }
+
+
+  handleCallback = (data1) => {
+    this.setState({ beastarray1: data1 });
+  };
   render() {
     return (
       <main>
-        {beastarray.map((item) => {
+        {this.state.beastarray1.map((elemnt) => {
           return (
-            <HornedBeasts
-              title={item.title}
-              desc={item.description}
-              image_url={item.image_url}
-              horns={item.horns}
-              alt={item.keyword}
-              showModal={this.props.showModal}
-              handleClose={this.props.handleClose}
-            />
+            <>
+              <Formhorn callBack={this.handleCallback} />
+
+              <HornedBeasts
+                title={elemnt.title}
+                desc={elemnt.description}
+                image_url={elemnt.image_url}
+                horns={elemnt.horns}
+                alt={elemnt.keyword}
+                showModal={this.props.showModal}
+                handleClose={this.props.handleClose}
+              />
+            </>
           );
         })}
       </main>
-    );}}
-  
-
+    );
+  }
+}
 
 export default Main;
-
-
-
-
-
-
-

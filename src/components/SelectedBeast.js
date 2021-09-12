@@ -1,9 +1,7 @@
-
-import React from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 class SelectedBeast extends React.Component {
   render() {
@@ -16,19 +14,18 @@ class SelectedBeast extends React.Component {
           <Modal.Body>
             <Card.Text>{this.props.theSelectedOne.title}</Card.Text>
             <Card.Img
-              variant="top"
+              variant='top'
               src={this.props.theSelectedOne.image_url}
               alt={this.props.title}
             />
             <Card.Text>{this.props.theSelectedOne.description}</Card.Text>
 
             <Card.Text>
-            
-              Number of Horns: {this.props.theSelectedOne.horns} 
+              Number of Horns: {this.props.theSelectedOne.horns}
             </Card.Text>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.props.handleClose}>
+            <Button variant='secondary' onClick={this.props.handleClose}>
               Close
             </Button>
           </Modal.Footer>
@@ -40,28 +37,18 @@ class SelectedBeast extends React.Component {
 
 export default SelectedBeast;
 
-
-
-
-
-
-
-
-
-// import React from "react";
-// import Modal from "react-bootstrap/Modal";
-// import Button from "react-bootstrap/Button";
+// import React from 'react';
+// import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
 
 // class SelectedBeast extends React.Component {
-  
 
 //   render() {
 //     return (
-      
+
 //     <div>
 //     </div>
-        
-        
+
 //     );
 //   }
 // }
